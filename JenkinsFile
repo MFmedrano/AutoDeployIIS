@@ -1,4 +1,4 @@
-//def ReleaseDir = "C:\Users\Lenovo\Documents\compiled"
+//def ReleaseDir = "c:\\inetpub\\wwwroot"
 pipeline {
 			agent any
 			stages {
@@ -9,7 +9,7 @@ pipeline {
 				}
 				stage('Build') {
     					steps {
-    					    bat "\"${tool 'MSBuild'}\" TESTDEPLOY.sln /p:DeployOnBuild=true /p:DeployDefaultTarget=WebPublish /p:WebPublishMethod=FileSystem /p:SkipInvalidConfigurations=true /t:build /p:Configuration=Release /p:Platform=\"Any CPU\" /p:DeleteExistingFiles=True /p:publishUrl=C:\Users\Lenovo\Documents\compiled"
+    					    bat "\"${tool 'MSBuild'}\" TESTDEPLOY.sln /p:DeployOnBuild=true /p:DeployDefaultTarget=WebPublish /p:WebPublishMethod=FileSystem /p:SkipInvalidConfigurations=true /t:build /p:Configuration=Release /p:Platform=\"Any CPU\" /p:DeleteExistingFiles=True /p:publishUrl=C:\\Users\\Lenovo\\Documents\\compiled"
     					}
 				}
 			}
